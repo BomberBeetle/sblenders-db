@@ -101,6 +101,7 @@ CREATE TABLE tbPedido (
 	restauranteID INT NOT NULL,
 	agenteID INT NOT NULL,
 	estadoPedidoID INT NOT NULL,
+	instrucoes VARCHAR(280),
 	pedidoDataHora DATETIME,
 	enderecoPedido VARCHAR(70),
 
