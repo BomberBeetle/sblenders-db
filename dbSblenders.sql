@@ -47,8 +47,8 @@ GO
 CREATE TABLE tbRestaurante (
 	restauranteID INT IDENTITY(1,1),
 	restauranteNome VARCHAR(50),
-	restauranteLat DECIMAL(6,3),
-	restauranteLong DECIMAL(6,3),
+	restauranteLat DECIMAL(7,4),
+	restauranteLong DECIMAL(7,4),
 
 	CONSTRAINT PK_tbRestaurante PRIMARY KEY (restauranteID),
 	/*
@@ -65,7 +65,7 @@ CREATE TABLE tbFuncionario (
 	agenteID INT NOT NULL,
 	funcionarioNome VARCHAR(100) NOT NULL,
 	funcionarioRG CHAR(11) NOT NULL,
-	funcionarioFoto BINARY NOT NULL,
+	funcionarioFoto BINARY,
 	restauranteID INT NOT NULL,
 
 	CONSTRAINT PK_tbFuncionario PRIMARY KEY (funcionarioID),
@@ -123,7 +123,7 @@ CREATE TABLE tbIngrediente (
 	ingredienteID INT IDENTITY(1,1),
 	categoriaIngredienteID INT NOT NULL,
 	ingredienteNome VARCHAR(50) NOT NULL,
-	ingredienteCusto DECIMAL(3,2),
+	ingredienteCusto DECIMAL(5,2),
 	ingredienteDescricao VARCHAR(200),
 	ingredienteFoto BINARY,
 
@@ -186,7 +186,7 @@ CREATE TABLE tbPedidoProduto (
 )
 GO
 CREATE TABLE tbPedidoProdutoIngrediente (
-	pedidoProdutoIngredienteID INT NOT NULL,
+	pedidoProdutoIngredienteID INT NOT NULL IDENTITY,
 	pedidoProdutoID INT NOT NULL,
 	produtoIngredienteID INT NOT NULL,
 	quantidadeIngrediente INT NOT NULL,
