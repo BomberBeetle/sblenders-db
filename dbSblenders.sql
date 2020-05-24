@@ -14,6 +14,7 @@ CREATE TABLE tbAgente (
 	agenteID INT IDENTITY(1,1),
 	tipoAgenteID INT NOT NULL,
 	agenteLogin VARCHAR(254) NOT NULL,
+	agenteSalt  CHAR(64) NOT NULL,
 	agenteSenha CHAR(64) NOT NULL,
 	agenteToken CHAR(64),
 
