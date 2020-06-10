@@ -64,6 +64,7 @@ CREATE TABLE tbFuncionario (
 	funcionarioID INT IDENTITY(1,1),
 	tipoFuncionarioID INT NOT NULL,
 	agenteID INT NOT NULL,
+	funcionarioSituacao BIT NOT NULL, --Define se o funcionário está ativo ou não. Recomendação do Luiz Ricardo
 	funcionarioNome VARCHAR(100) NOT NULL,
 	funcionarioRG CHAR(11) NOT NULL,
 	funcionarioFoto BINARY,
