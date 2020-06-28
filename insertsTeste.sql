@@ -20,7 +20,7 @@ INSERT INTO tbTipoFuncionario(tipoFuncionarioNome) VALUES ('Cozinheiro'), ('Entr
 GO
 INSERT INTO tbRestaurante(restauranteNome, restauranteLat, restauranteLong) VALUES ('Sblenders Av. Tiradentes', -23.464, -46.529), ('Sblenders Avenida Paulista', -23.562, -46.654)
 GO
-INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID) VALUES (1, 5, 'Han Solo', '01234567890', 1)
+INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID, funcionarioSituacao) VALUES (1, 5, 'Han Solo', '01234567890', 1, 1)
 GO
 INSERT INTO tbTotem(agenteID, restauranteID) VALUES (6, 1)
 GO
