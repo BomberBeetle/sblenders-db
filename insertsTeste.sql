@@ -22,7 +22,7 @@ INSERT INTO tbRestaurante(restauranteNome, restauranteLat, restauranteLong) VALU
 GO
 INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID, funcionarioSituacao) VALUES (1, 5, 'Han Solo', '01234567890', 1, 1)
 GO
-INSERT INTO tbTotem(agenteID, restauranteID) VALUES (6, 1)
+INSERT INTO tbTotem(agenteID, restauranteID) VALUES (7, 1)
 GO
 INSERT INTO tbEstadoPedido(estadoPedidoNome) VALUES ('Em andamento'), ('Pronto'), ('A caminho'), ('Entregue')
 GO
