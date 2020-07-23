@@ -157,7 +157,7 @@ CREATE TABLE tbProduto (
 	produtoNome VARCHAR(50) NOT NULL,
 	produtoCusto DECIMAL(5,2) NOT NULL,
 	produtoDescricao VARCHAR(300),
-	produtoFoto BINARY,
+	produtoFoto VARBINARY(MAX),
 
 	CONSTRAINT PK_tbProduto PRIMARY KEY (produtoID),
 	CONSTRAINT FK_tbProduto_categoriaProdutoID FOREIGN KEY (categoriaProdutoID) REFERENCES tbCategoriaProduto,
@@ -196,4 +196,21 @@ CREATE TABLE tbPedidoProdutoIngrediente (
 	CONSTRAINT PK_tbPedidoProdutoIngrediente PRIMARY KEY (pedidoProdutoIngredienteID),
 	CONSTRAINT FK_tbPedidoProdutoIngrediente_pedidoProdutoID FOREIGN KEY (pedidoProdutoID) REFERENCES tbPedidoProduto,
 	CONSTRAINT FK_tbPedidoProdutoIngrediente_produtoIngredienteID FOREIGN KEY (produtoIngredienteID) REFERENCES tbProdutoIngrediente
+)
+GO
+CREATE TABLE tbInformacaoNutricionalTipo (
+	informacaoNutriTipoID INT IDENTITY(1,1), -- ID do tipo de informação nutricional
+	informacaoNutriTipoDescricao VARCHAR(50), -- Energia, Sal, Proteína etc.
+
+	CONSTRAINT PK_tbInformacaoNutricionalTipo PRIMARY KEY (informacaoNutriTipoID),
+	CONSTRAINT UQ_tbInformacaoNutriTipo_informacaoNutriTipoDescricao UNIQUE (informacaoNutriTipoDescricao)
+)
+GO
+CREATE TABLE tbInformacaoNutricional (
+	produtoID INT, -- Associa o produto ao tipo de informação nutricional
+	informacaoNutriTipoID INT, -- Informa qual é o tipo de informação nutricional
+	informacaoNutricionalValor INT, -- Informa o valor da informação nutricional (Ex.: Sais - 40g, Proteínas - 50g etc.)
+
+	CONSTRAINT FK_tbInformacaoNutricional_produtoID FOREIGN KEY (produtoID) REFERENCES tbProduto,
+	CONSTRAINT FK_tbInformacaoNutricional_informacaoNutricionalTipo FOREIGN KEY (informacaoNutriTipoID) REFERENCES tbInformacaoNutricionalTipo,
 )
