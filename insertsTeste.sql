@@ -6,22 +6,22 @@ INSERT INTO tbTipoAgente(tipoAgenteID, tipoAgenteNome) VALUES (1,'ClienteOnline'
 INSERT INTO tbTipoAgente(tipoAgenteID, tipoAgenteNome) VALUES (2,'Funcionario')
 INSERT INTO tbTipoAgente(tipoAgenteID, tipoAgenteNome) VALUES (3,'Totem')
 GO
-INSERT INTO tbAgente(tipoAgenteID, agenteLogin, agenteSenha) VALUES(0, 0, '9E4907956C9EB81F75DECE289725F5BBA897270569F1D7D75004C69FE08AD52F')
+INSERT INTO tbAgente(tipoAgenteID, agenteLogin, agenteSenha, agenteSalt) VALUES(0, 0, '9E4907956C9EB81F75DECE289725F5BBA897270569F1D7D75004C69FE08AD52F', 'a'), (0, 1, '8E4907956C9EB81F75DECE289725F5BBA897270569F1D7D75004C69FE08AD52F', 'b'), (0, 2, '7E4907956C9EB81F75DECE289725F5BBA897270569F1D7D75004C69FE08AD52F', 'c'), (0, 3, '6E4907956C9EB81F75DECE289725F5BBA897270569F1D7D75004C69FE08AD52F', 'd')
 GO
-INSERT INTO tbClienteOnline(clienteOnlineNome, clienteOnlineSobrenome) VALUES ('Anakin', 'Skywalker'), ('Obi-Wan', 'Kenobi'), ('Luke', 'Skywalker'), ('Leia', 'Organa')
+INSERT INTO tbClienteOnline(clienteOnlineNome, clienteOnlineSobrenome, clienteOnlineVerificadoFlag, agenteID) VALUES ('Anakin', 'Skywalker', 1, 1), ('Obi-Wan', 'Kenobi', 1, 2), ('Luke', 'Skywalker', 1, 3), ('Leia', 'Organa', 1, 4)
 GO
 INSERT INTO tbTipoFuncionario(tipoFuncionarioNome) VALUES ('Permanente'), ('Temporário'), ('Aprendiz'), ('Terceiro') -- Nâo tenho certeza se é isso que você queria dizer com tipo de funcionário
 GO
-INSERT INTO tbRestaurante(restauranteNome, restauranteLat, restauranteLong) VALUES ('Sblenders Av. Tiradentes', 123456.4567, 654789.0000), ('Sblenders Avenida Paulista', 000000.9876, 654321.3210)
+INSERT INTO tbRestaurante(restauranteNome, restauranteLat, restauranteLong) VALUES ('Sblenders Av. Tiradentes', 12345.4567, 65478.0000), ('Sblenders Avenida Paulista', 00000.9876, 65432.3210)
 GO
-INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID) VALUES (1, 1, 'Han Solo', '01234567890', 1)
+INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID, funcionarioSituacao) VALUES (1, 1, 'Han Solo', '01234567890', 1, 1)
 GO
 INSERT INTO tbTotem(agenteID, restauranteID) VALUES (1, 1)
 GO
 INSERT INTO tbEstadoPedido(estadoPedidoNome) VALUES ('Em andamento'), ('Pronto'), ('À caminho'), ('Entregue')
 GO
 INSERT INTO tbPedido(restauranteID, agenteID, estadoPedidoID, instrucoes, pedidoDataHora, enderecoPedido) VALUES (1, 1, 2, 'Entregar acompanhado de sachê de mostarda.', FORMAT(GETDATE(), 'HH:mm'), 'Rua Yavin, 4'),
-(2, 1, 3, 'Desenhar um cachorro na embalagem', FORMAT(GETDATE, 'HH:mm'), 'Rua Tatooine, 77'), (1, 1, 4, 'Jogar pela janela da casa', FORMAT(GETDATE(), 'HH:mm'), 'Rua uaR, 123321'),
+(2, 1, 3, 'Desenhar um cachorro na embalagem', FORMAT(GETDATE(), 'HH:mm'), 'Rua Tatooine, 77'), (1, 1, 4, 'Jogar pela janela da casa', FORMAT(GETDATE(), 'HH:mm'), 'Rua uaR, 123321'),
 (2, 1, 1, 'Beber um gole', FORMAT(GETDATE(), 'HH:mm'), 'Rua Rocky, 2')
 GO
 INSERT INTO tbCategoriaIngrediente(categoriaIngredienteNome) VALUES ('Salgado'), ('Docê'), ('Agridoce'), ('Amargo'), ('Azedo'), ('Ácido'), ('Água'),('Refrigerante'), ('Suco'), ('Chá')
