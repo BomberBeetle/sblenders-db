@@ -48,8 +48,8 @@ GO
 CREATE TABLE tbRestaurante (
 	restauranteID INT IDENTITY(1,1),
 	restauranteNome VARCHAR(50),
-	restauranteLat DECIMAL(7,4),
-	restauranteLong DECIMAL(7,4),
+	restauranteLat DECIMAL(10,4),
+	restauranteLong DECIMAL(10,4),
 
 	CONSTRAINT PK_tbRestaurante PRIMARY KEY (restauranteID),
 	/*
