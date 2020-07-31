@@ -33,7 +33,7 @@ CREATE TABLE tbClienteOnline (
 
 	CONSTRAINT PK_tbClienteOnline PRIMARY KEY (clienteOnlineID),
 	CONSTRAINT FK_tbClienteOnline_agenteID FOREIGN KEY (agenteID) REFERENCES tbAgente,
-	CONSTRAINT UQ_tbClienteOnline_agenteID UNIQUE (agenteID)
+	--CONSTRAINT UQ_tbClienteOnline_agenteID UNIQUE (agenteID)
 )
 GO
 CREATE TABLE tbTipoFuncionario (
@@ -44,12 +44,11 @@ CREATE TABLE tbTipoFuncionario (
 	CONSTRAINT UQ_tbTipoFuncionario_tipoFuncionarioNome UNIQUE (tipoFuncionarioNome)
 )
 GO
-GO
 CREATE TABLE tbRestaurante (
 	restauranteID INT IDENTITY(1,1),
 	restauranteNome VARCHAR(50),
-	restauranteLat DECIMAL(10,4),
-	restauranteLong DECIMAL(10,4),
+	restauranteLat DECIMAL(10,7),
+	restauranteLong DECIMAL(10,7),
 
 	CONSTRAINT PK_tbRestaurante PRIMARY KEY (restauranteID),
 	/*

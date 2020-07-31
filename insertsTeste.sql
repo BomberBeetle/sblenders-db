@@ -12,7 +12,15 @@ INSERT INTO tbClienteOnline(clienteOnlineNome, clienteOnlineSobrenome, clienteOn
 GO
 INSERT INTO tbTipoFuncionario(tipoFuncionarioNome) VALUES ('Permanente'), ('Temporário'), ('Aprendiz'), ('Terceiro') -- Nâo tenho certeza se é isso que você queria dizer com tipo de funcionário
 GO
-INSERT INTO tbRestaurante(restauranteNome, restauranteLat, restauranteLong) VALUES ('Sblenders Av. Tiradentes', 12345.4567, 65478.0000), ('Sblenders Avenida Paulista', 00000.9876, 65432.3210)
+INSERT INTO tbRestaurante(restauranteNome, restauranteLat, restauranteLong) VALUES ('Av. Tiradentes', 12.3454567, 65.0001000),
+('R. Alvinópolis', -23.533446, -46.542555), ('Av. Olavo Fontoura', -23.51094057, -46.63993478),
+('R. Miquelino Gabriel Fraga', -23.62200102, -46.6548425), ('R. Ipanema', -23.54674172, -46.60619795),
+('Avenida Tiradentes', -23.530822, -46.632565), ('Av. José Pinheiro Borges', -23.540086, -46.471189),
+('R. Engenheiro Camilo Olivetti', -23.488445, -46.548990), ('R. Mal. Maurício Cardoso', -23.580961, -46.656938),
+('Av. Carlos Caldeira Filho', -23.659340, -46.768888), ('Av. Adolfo Pinheiro', -23.650001, -46.704369),
+('Av. Vital Brasil', -23.571713, -46.708885), ('R. Paulo de Faria', -23.479693, -46.601862),
+('R. Ettore Lantieri', -23.603058, -46.604008), ('Av. Paulista, Jardins', -23.563546, -46.655087),
+('R. Vergueiro', -23.568796, -46.639941), ('Av. Guilherme Cotching', -23.522107, -46.592830)
 GO
 INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID, funcionarioSituacao) VALUES (1, 1, 'Han Solo', '01234567890', 1, 1)
 GO
@@ -49,3 +57,6 @@ INSERT INTO tbPedidoProduto(pedidoID, produtoID, pedidoProdutoQtde) VALUES (1, 1
 GO
 INSERT INTO tbPedidoProdutoIngrediente(pedidoProdutoID, produtoIngredienteID, quantidadeIngrediente) VALUES (1, 1, 1), (1, 2, 3), (1, 3, 4), (1, 4, 7), -- Fiz só com os dois utilizados no insert da tbProdutoIngrediente
 (2, 5, 6), (2, 6, 3), (2, 7, 5)
+/*
+use master
+*/
