@@ -27,7 +27,7 @@ INSERT INTO tbRestaurante(restauranteNome, restauranteLat, restauranteLong) VALU
 ('R. Ettore Lantieri', -23.603058, -46.604008), ('Av. Paulista, Jardins', -23.563546, -46.655087),
 ('R. Vergueiro', -23.568796, -46.639941), ('Av. Guilherme Cotching', -23.522107, -46.592830)
 GO 
-INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID, funcionarioSituacao) VALUES (1, 5, 'Han Solo', '01234567890', 1, 1), (1, 6, 'Walter Clements', '01234967890', 1, 1)
+INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID, funcionarioSituacao) VALUES (1, 5, 'Han Solo', '01234567890', 1, 1), (2, 6, 'Walter Clements', '01234967890', 1, 1)
 GO
 INSERT INTO tbTotem(agenteID, restauranteID) VALUES (7, 1)
 GO
