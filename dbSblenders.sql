@@ -66,7 +66,7 @@ CREATE TABLE tbFuncionario (
 	funcionarioSituacao BIT NOT NULL, --Define se o funcionário está ativo ou não. Recomendação do Luiz Ricardo
 	funcionarioNome VARCHAR(100) NOT NULL,
 	funcionarioRG CHAR(11) NOT NULL,
-	funcionarioFoto BINARY,
+	funcionarioFoto VARBINARY(MAX),
 	restauranteID INT NOT NULL,
 
 	CONSTRAINT PK_tbFuncionario PRIMARY KEY (funcionarioID),
@@ -126,7 +126,7 @@ CREATE TABLE tbIngrediente (
 	ingredienteNome VARCHAR(50) NOT NULL,
 	ingredienteCusto DECIMAL(5,2),
 	ingredienteDescricao VARCHAR(200),
-	ingredienteFoto BINARY,
+	ingredienteFoto VARBINARY(MAX),
 
 	CONSTRAINT PK_tbIngrediente PRIMARY KEY (ingredienteID),
 	CONSTRAINT FK_tbIngrediente_categoriaIngredienteID FOREIGN KEY (categoriaIngredienteID) REFERENCES tbCategoriaIngrediente,
@@ -153,7 +153,7 @@ GO
 CREATE TABLE tbProduto (
 	produtoID INT IDENTITY(1,1),
 	categoriaProdutoID INT NOT NULL,
-	produtoNome VARCHAR(50) NOT NULL,
+	produtoNome VARCHAR(100) NOT NULL,
 	produtoCusto DECIMAL(5,2) NOT NULL,
 	produtoDescricao VARCHAR(300),
 	produtoFoto VARBINARY(MAX),
