@@ -39,7 +39,7 @@ SELECT
 	'11235467901',
 	1,
 	BulkColumn
-FROM Openrowset(Bulk '<INSIRA DIRETÓRIO AQUI>', Single_Blob) as Image
+FROM Openrowset(Bulk '<caminho>\funcFoto\Ricardo.jpg', Single_Blob) as Image
 
 GO
 
@@ -60,7 +60,7 @@ SELECT
 	'12345678910',
 	2,
 	BulkColumn
-FROM Openrowset(Bulk '<INSIRA DIRETÓRIO AQUI>', Single_Blob) as ImageR
+FROM Openrowset(Bulk '<caminho>\funcFoto\Rafael.jpg', Single_Blob) as Image
 
 GO -- Inserts para ingrediente
 
@@ -77,7 +77,7 @@ SELECT
 	10.0,
 	'Pão italiano feito com massa integral e com sementes.',
 	BulkColumn
-FROM Openrowset(Bulk '<INSIRA DIRETÓRIO AQUI>', Single_Blob) as Image
+FROM Openrowset(Bulk '<caminho>\ingFoto\italiano.jpeg', Single_Blob) as Image
 
 GO
 
@@ -94,7 +94,7 @@ SELECT
 	12.0,
 	'Filé de fígado acebolado feito no óleo de soja.',
 	BulkColumn
-FROM Openrowset(Bulk '<INSIRA DIRETÓRIO AQUI>', Single_Blob) as Image
+FROM Openrowset(Bulk '<caminho>\ingFoto\figado.jpg', Single_Blob) as Image
 
 GO
 
@@ -111,7 +111,7 @@ SELECT
 	5.0,
 	'Folhas de coentro fresco.',
 	BulkColumn
-FROM Openrowset(Bulk '<INSIRA DIRETÓRIO AQUI>', Single_Blob) as Image
+FROM Openrowset(Bulk '<caminho>\ingFoto\coentro.jpg', Single_Blob) as Image
 
 GO -- Inserts de produto
 
@@ -128,7 +128,7 @@ SELECT
 	8.0,
 	'Grandes fatias de batatas fritas no óleo de girassol, acompanhadas de ketchup',
 	BulkColumn
-FROM Openrowset(Bulk '<INSIRA DIRETÓRIO AQUI>', Single_Blob) as Image
+FROM Openrowset(Bulk '<caminho>\prodFoto\frita.jpg', Single_Blob) as Image
 
 GO
 
@@ -145,7 +145,7 @@ SELECT
 	8.0,
 	'Refrigerante Coca-Cola© Zero Açúcar',
 	BulkColumn
-FROM Openrowset(Bulk '<INSIRA DIRETÓRIO AQUI>', Single_Blob) as Image
+FROM Openrowset(Bulk '<caminho>\prodFoto\coca.jpg', Single_Blob) as Image
 
 GO
 
@@ -162,4 +162,4 @@ SELECT
 	8.0,
 	'Picolé feito com extrato de morango, recheado com leite condesado Nestlé® Moça',
 	BulkColumn
-FROM Openrowset(Bulk '<INSIRA DIRETÓRIO AQUI>', Single_Blob) as Image
+FROM Openrowset(Bulk '<caminho>\prodFoto\morango.png', Single_Blob) as Image
