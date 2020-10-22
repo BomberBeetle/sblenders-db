@@ -69,4 +69,5 @@ INSERT INTO tbPedidoProdutoIngrediente(pedidoProdutoID, produtoIngredienteID, qu
 
 /*
 use master
+drop database dbSblenders
 */
