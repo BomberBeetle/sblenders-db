@@ -41,7 +41,7 @@ INSERT INTO tbCategoriaIngrediente(categoriaIngredienteNome) VALUES ('Pão'), ('C
 GO
 INSERT INTO tbIngrediente(categoriaIngredienteID, ingredienteNome, ingredienteCusto, ingredienteDescricao) VALUES (2, 'Frango', 2.5, 'Frango cozido desfiado'), (7, 'Chocolate', 3, 'Gotas de chocolate ao leite'),
 (3, 'Pepino', 2, 'Rodelas de pepino'), (4, 'Jiló', 1.5, 'Cubos de jiló cozido'), (6, 'Extrato de Limão', 2, 'Extrato de limão siciliano'), (6, 'Pimento do reino', 3, 'Sementes de pimenta do reino'),
-(1, 'Pão de forma integral', 3, 'Fatia de pão de forma integral'), (1, 'Pão francês', 3, 'Pão tipo francês'), (3, 'Tomate', 2.5, 'Rodelas de tomate'), (3, 'Alface', 2.5, 'Folhas de alface americano'), (3, 'Limão', 2, 'Rodelas de limão')
+(1, 'Pão de forma integral', 3, 'Fatia de pão de forma integral'), (1, 'Pão francês', 3, 'Pão tipo francês'), (4, 'Tomate', 2.5, 'Rodelas de tomate'), (3, 'Alface', 2.5, 'Folhas de alface americano')
 GO
 INSERT INTO tbEstoqueIngrediente(ingredienteID, restauranteID, estoqueIngredienteQuantidade) VALUES (1, 1, 75), (2, 1, 100), (3, 1, 65), (4, 1, 30), (5, 1, 35),
 (6, 2, 76), (7, 2, 127), (8, 2, 62), (9, 2, 29), (10, 2, 44)
@@ -59,12 +59,12 @@ INSERT INTO tbProduto(categoriaProdutoID, produtoNome, produtoCusto, produtoDesc
 (4,'Molho de Mostarda, 100mg, 150kcal',1.70,'Molho de Mostarda, 100mg, 150kcal'),(5,'Sblurger',0.0,'Monte seu Sblurger'),
 (2, 'Itubaína©', 5, 'Refrigerante Itubaína em garrafa'), (2, 'Del Vale© Maracujá', 6.5, 'Suco de maracujá em lata'), (2, 'BÆR-MATE®', 7, 'Chá mate')
 GO
-INSERT INTO tbProdutoIngrediente (ingredienteID, produtoID, quantidadePadrao, novoPreco) VALUES (1,17,1,2.5),(2,17,1,3),(3,17,1,2),(4,17,1,1.5),(5,17,1,2),(6,17,1,3),
-(7,17,1,3),(8,17,1,3),(9,17,1,2.5),(10,17,1,2.5),(11,17,1,2)
+INSERT INTO tbProdutoIngrediente (ingredienteID, produtoID, quantidadePadrao, novoPreco) VALUES (1,18,1,2.5),(2,18,1,3),(3,18,1,2),(4,18,1,1.5),(5,18,1,2),(6,18,1,3),
+(7,18,1,3),(8,18,1,3),(9,18,1,2.5),(10,18,1,2.5)
 GO
-INSERT INTO tbPedidoProduto(pedidoID, produtoID, pedidoProdutoQtde) VALUES (1, 17, 3), (2, 3, 4), (3, 5, 5), (4, 7, 6)
+INSERT INTO tbPedidoProduto(pedidoID, produtoID, pedidoProdutoQtde) VALUES (1, 18, 3), (2, 3, 4), (3, 5, 5), (4, 7, 6)
 GO
-INSERT INTO tbPedidoProdutoIngrediente(pedidoProdutoID, produtoIngredienteID, quantidadeIngrediente) VALUES (1, 1, 1), (1, 2, 3), (1, 3, 4), (1, 4, 7) -- Fiz só com os dois utilizados no insert da tbProdutoIngrediente
+INSERT INTO tbPedidoProdutoIngrediente(pedidoProdutoID, produtoIngredienteID, quantidadeIngrediente) VALUES (1, 1, 1), (1, 9, 3), (1, 3, 4), (1, 4, 7) -- Fiz só com os dois utilizados no insert da tbProdutoIngrediente
 GO
 INSERT INTO tbAgente(
 	tipoAgenteID,
