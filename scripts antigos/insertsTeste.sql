@@ -60,7 +60,7 @@ INSERT INTO tbProduto(categoriaProdutoID, produtoNome, produtoCusto, produtoDesc
 (2, 'Itubaína©', 5, 'Refrigerante Itubaína em garrafa'), (2, 'Del Vale© Maracujá', 6.5, 'Suco de maracujá em lata'), (2, 'BÆR-MATE®', 7, 'Chá mate')
 GO
 INSERT INTO tbProdutoIngrediente (ingredienteID, produtoID, quantidadePadrao, novoPreco) VALUES (1,17,1,2.5),(2,17,1,3),(3,17,1,2),(4,17,1,1.5),(5,17,1,2),(6,17,1,3),
-(7,17,1,5),(8,17,1,5),(9,17,1,6.5),(10,17,1,7),(11,17,1,3),(12,17,1,3),(13,17,1,2.5),(14,17,1,2.5),(15,17,1,3),(16,17,1,2)
+(7,17,1,3),(8,17,1,3),(9,17,1,2.5),(10,17,1,2.5),(11,17,1,2)
 GO
 INSERT INTO tbPedidoProduto(pedidoID, produtoID, pedidoProdutoQtde) VALUES (1, 17, 3), (2, 3, 4), (3, 5, 5), (4, 7, 6)
 GO
