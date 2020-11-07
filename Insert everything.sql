@@ -37,11 +37,19 @@ INSERT INTO tbPedido(restauranteID, agenteID, estadoPedidoID, instrucoes, pedido
 (1, 1, 3, 'Desenhar um cachorro na embalagem', FORMAT(GETDATE(), 'HH:mm'), 'Rua Tatooine, 77'), (1, 1, 4, 'Jogar pela janela da casa', FORMAT(GETDATE(), 'HH:mm'), 'Rua uaR, 123321'),
 (1, 1, 1, 'Beber um gole', FORMAT(GETDATE(), 'HH:mm'), 'Rua Rocky, 2')
 GO
-INSERT INTO tbCategoriaIngrediente(categoriaIngredienteNome) VALUES ('Pão'), ('Carne'), ('Verdura'), ('Legume'), ('Queijo'), ('Molho'), ('Cobertura')
+INSERT INTO tbCategoriaIngrediente(categoriaIngredienteNome) VALUES ('Pão'), ('Carne'), ('Vegetal'), ('Queijo'), ('Molho'), ('Cobertura')
 GO
-INSERT INTO tbIngrediente(categoriaIngredienteID, ingredienteNome, ingredienteCusto, ingredienteDescricao) VALUES (2, 'Frango', 2.5, 'Frango cozido desfiado'), (7, 'Chocolate', 3, 'Gotas de chocolate ao leite'),
-(3, 'Pepino', 2, 'Rodelas de pepino'), (4, 'Jiló', 1.5, 'Cubos de jiló cozido'), (6, 'Extrato de Limão', 2, 'Extrato de limão siciliano'), (6, 'Pimento do reino', 3, 'Sementes de pimenta do reino'),
-(1, 'Pão de forma integral', 3, 'Fatia de pão de forma integral'), (1, 'Pão francês', 3, 'Pão tipo francês'), (4, 'Tomate', 2.5, 'Rodelas de tomate'), (3, 'Alface', 2.5, 'Folhas de alface americano')
+INSERT INTO tbIngrediente(categoriaIngredienteID, ingredienteNome, ingredienteCusto, ingredienteDescricao) VALUES (1, 'Pão de forma integral (fatia superior)', 1.5, 'Fatia superior de pão de forma integral'),
+(1, 'Pão de forma integral (fatia inferior)', 1.5, 'Fatia inferior de pão de forma integral'), (1, 'Pão francês (fatia superior)', 2, 'Fatia superior de pão francês'),
+(1, 'Pão francês (fatia inferior)', 2, 'Fatia inferior de pão francês'), (1, 'Pão italiano integral (fatia superior)', 3.5, 'Fatia superior de pão italiano integral'),
+(1, 'Pão italiano integral (fatia inferior)', 3.5, 'Fatia inferior de pão italiano integral'), (1, 'Pão de hambúrguer sem gergelim (fatia superior)', 2.5, 'Fatia superior de pão de hambúrguer sem gergelim'),
+(1, 'Pão de hambúrguer sem gergelim (fatia inferior)', 2.5, 'Fatia inferior de pão de hambúrguer sem gergelim'), (1, 'Pão de hambúguer com gergelim (fatia superior)', 3, 'Fatia superior de pão de hambúrguer com gergelim'),
+(1, 'Pão de hambúrguer com gergelim (fatia inferior)', 3, 'Fatia inferior de pão de hambúrguer com gergelim'), (2, 'Frango', 2.5, 'Frango cozido desfiado'), (2, 'Fígado acebolado', 2.5, 'Filé de fígado acebolado'),
+(2, 'Hambúrguer', 3, 'Hambúrguer de carne'), (2, 'Hambúrguer à la Sblenders', 4, 'Hambúrguer à moda da casa'), (2, 'Filé de Peixe', 2.5, 'Filé de tilápia'), (3, 'Pepino', 1, 'Rodelas de pepino'),
+(3, 'Tomate', 1, 'Rodela de tomate'), (3, 'Alface', 1, 'Folha de alface'), (3, 'Jiló', 1, 'Cubo de jiló'), (3, 'Coentro', 3, 'Folhas de coentro em pedaço'), (3, 'Pimenta jalapenho', 2, 'Rodelas de pimenta jalapenho'),
+(3, 'Picles', 2, 'Rodelas de picles'), (4, 'Cheddar', 3, 'Fatia de queijo cheddar'), (4, 'Parmesão', 2.5, 'Queijo parmesão ralado'), (4, 'Provolone', 3, 'Quejio provolone ralado'),
+(4, 'Muçarela', 2, 'Fatia de queijo muçarela'), (4, 'Queijo branco', 3, 'Fatia de queijo branco'), (5, 'Ketchup', 3, 'Molho ketchup'), (5, 'Mostarda', 3, 'Molho de mostarda'), (5, 'Maionese', 3, 'Molho maionese'),
+(5, 'Molho especial Sblender', 3, 'Molho secreto...'), (6, 'Chocolate', 3, 'Cauda de chocolate'), (6, 'Morango', 2.5, 'Cauda de morango'), (6, 'Caramelo', 4, 'Cauda de caramelo')
 GO
 INSERT INTO tbEstoqueIngrediente(ingredienteID, restauranteID, estoqueIngredienteQuantidade) VALUES (1, 1, 75), (2, 1, 100), (3, 1, 65), (4, 1, 30), (5, 1, 35),
 (6, 2, 76), (7, 2, 127), (8, 2, 62), (9, 2, 29), (10, 2, 44)
