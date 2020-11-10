@@ -44,9 +44,9 @@ INSERT INTO tbIngrediente(categoriaIngredienteID, ingredienteNome, ingredienteCu
 (1, 'Pão francês (fatia inferior)', 2, 'Fatia inferior de pão francês'), (1, 'Pão italiano integral (fatia superior)', 3.5, 'Fatia superior de pão italiano integral'),
 (1, 'Pão italiano integral (fatia inferior)', 3.5, 'Fatia inferior de pão italiano integral'), (1, 'Pão de hambúrguer sem gergelim (fatia superior)', 2.5, 'Fatia superior de pão de hambúrguer sem gergelim'),
 (1, 'Pão de hambúrguer sem gergelim (fatia inferior)', 2.5, 'Fatia inferior de pão de hambúrguer sem gergelim'), (1, 'Pão de hambúguer com gergelim (fatia superior)', 3, 'Fatia superior de pão de hambúrguer com gergelim'),
-(1, 'Pão de hambúrguer com gergelim (fatia inferior)', 3, 'Fatia inferior de pão de hambúrguer com gergelim'), (2, 'Frango', 2.5, 'Frango cozido desfiado'), (2, 'Fígado acebolado', 2.5, 'Filé de fígado acebolado'),
+(1, 'Pão de hambúrguer com gergelim (fatia inferior)', 3, 'Fatia inferior de pão de hambúrguer com gergelim'), (2, 'Frango', 2.5, 'Frango cozido desfiado'),
 (2, 'Hambúrguer', 3, 'Hambúrguer de carne'), (2, 'Hambúrguer à la Sblenders', 4, 'Hambúrguer à moda da casa'), (2, 'Filé de Peixe', 2.5, 'Filé de tilápia'), (3, 'Pepino', 1, 'Rodelas de pepino'),
-(3, 'Tomate', 1, 'Rodela de tomate'), (3, 'Alface', 1, 'Folha de alface'), (3, 'Jiló', 1, 'Cubo de jiló'), (3, 'Coentro', 3, 'Folhas de coentro em pedaço'), (3, 'Pimenta jalapenho', 2, 'Rodelas de pimenta jalapenho'),
+(3, 'Tomate', 1, 'Rodela de tomate'), (3, 'Alface', 1, 'Folha de alface'), (3, 'Jiló', 1, 'Cubo de jiló'), (3, 'Pimenta jalapenho', 2, 'Rodelas de pimenta jalapenho'),
 (3, 'Picles', 2, 'Rodelas de picles'), (4, 'Cheddar', 3, 'Fatia de queijo cheddar'), (4, 'Parmesão', 2.5, 'Queijo parmesão ralado'), (4, 'Provolone', 3, 'Quejio provolone ralado'),
 (4, 'Muçarela', 2, 'Fatia de queijo muçarela'), (4, 'Queijo branco', 3, 'Fatia de queijo branco'), (5, 'Ketchup', 3, 'Molho ketchup'), (5, 'Mostarda', 3, 'Molho de mostarda'), (5, 'Maionese', 3, 'Molho maionese'),
 (5, 'Molho especial Sblender', 3, 'Molho secreto...'), (6, 'Chocolate', 3, 'Cauda de chocolate'), (6, 'Morango', 2.5, 'Cauda de morango'), (6, 'Caramelo', 4, 'Cauda de caramelo')
@@ -109,7 +109,7 @@ SELECT
 	'11235467901',
 	1,
 	BulkColumn
-FROM Openrowset(Bulk '<caminho>\sblenders-db/funcFoto/Ricardo.jpg', Single_Blob) as Image
+FROM Openrowset(Bulk 'C:\Users\guime\Documents\GitHub\sblenders-db/funcFoto/Ricardo.jpg', Single_Blob) as Image
 GO
 INSERT INTO tbFuncionario (
 	tipoFuncionarioID,
@@ -128,7 +128,7 @@ SELECT
 	'12345678910',
 	2,
 	BulkColumn
-FROM Openrowset(Bulk '<caminho>\sblenders-db/funcFoto/Rafael.jpg', Single_Blob) as Image
+FROM Openrowset(Bulk 'C:\Users\guime\Documents\GitHub\sblenders-db/funcFoto/Rafael.jpg', Single_Blob) as Image
 GO -- Inserts para ingrediente
 INSERT INTO tbIngrediente (
 	categoriaIngredienteID,
@@ -143,7 +143,7 @@ SELECT
 	10.0,
 	'Pão italiano feito com massa integral e com sementes.',
 	BulkColumn
-FROM Openrowset(Bulk '<caminho>\sblenders-db/ingFoto/italiano.jpeg', Single_Blob) as Image
+FROM Openrowset(Bulk 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/italiano.jpeg', Single_Blob) as Image
 GO
 INSERT INTO tbIngrediente (
 	categoriaIngredienteID,
@@ -158,7 +158,7 @@ SELECT
 	12.0,
 	'Filé de fígado acebolado feito no óleo de soja.',
 	BulkColumn
-FROM Openrowset(Bulk '<caminho>\sblenders-db/ingFoto/figado.jpg', Single_Blob) as Image
+FROM Openrowset(Bulk 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/figado.jpg', Single_Blob) as Image
 GO
 INSERT INTO tbIngrediente (
 	categoriaIngredienteID,
@@ -173,7 +173,7 @@ SELECT
 	5.0,
 	'Folhas de coentro fresco.',
 	BulkColumn
-FROM Openrowset(Bulk '<caminho>\sblenders-db/ingFoto/coentro.jpg', Single_Blob) as Image
+FROM Openrowset(Bulk 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/coentro.jpg', Single_Blob) as Image
 GO -- Inserts de produto
 INSERT INTO tbProduto (
 	categoriaProdutoID,
@@ -188,7 +188,7 @@ SELECT
 	8.0,
 	'Grandes fatias de batatas fritas no óleo de girassol, acompanhadas de ketchup',
 	BulkColumn
-FROM Openrowset(Bulk '<caminho>\sblenders-db/prodFoto/frita.jpg', Single_Blob) as Image
+FROM Openrowset(Bulk 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto/frita.jpg', Single_Blob) as Image
 GO
 INSERT INTO tbProduto (
 	categoriaProdutoID,
@@ -203,7 +203,7 @@ SELECT
 	8.0,
 	'Refrigerante Coca-Cola© Zero Açúcar',
 	BulkColumn
-FROM Openrowset(Bulk '<caminho>\sblenders-db/prodFoto/coca.jpg', Single_Blob) as Image
+FROM Openrowset(Bulk 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto/coca.jpg', Single_Blob) as Image
 GO
 INSERT INTO tbProduto (
 	categoriaProdutoID,
@@ -218,85 +218,956 @@ SELECT
 	8.0,
 	'Picolé feito com extrato de morango, recheado com leite condesado Nestlé® Moça',
 	BulkColumn
-FROM Openrowset(Bulk '<caminho>\sblenders-db/prodFoto/morango.png', Single_Blob) as Image
+FROM Openrowset(Bulk 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto/morango.png', Single_Blob) as Image
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod1.png', SINGLE_BLOB) as T1) WHERE produtoID = 1
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod1.png', SINGLE_BLOB) as T1) WHERE produtoID = 1
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod2.png', SINGLE_BLOB) as T1) WHERE produtoID = 2
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod2.png', SINGLE_BLOB) as T1) WHERE produtoID = 2
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod3.png', SINGLE_BLOB) as T1) WHERE produtoID = 3
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod3.png', SINGLE_BLOB) as T1) WHERE produtoID = 3
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod4.png', SINGLE_BLOB) as T1) WHERE produtoID = 4
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod4.png', SINGLE_BLOB) as T1) WHERE produtoID = 4
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod5.png', SINGLE_BLOB) as T1) WHERE produtoID = 5
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod5.png', SINGLE_BLOB) as T1) WHERE produtoID = 5
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod6.png', SINGLE_BLOB) as T1) WHERE produtoID = 6
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod6.png', SINGLE_BLOB) as T1) WHERE produtoID = 6
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod7.png', SINGLE_BLOB) as T1) WHERE produtoID = 7
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod7.png', SINGLE_BLOB) as T1) WHERE produtoID = 7
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod8.png', SINGLE_BLOB) as T1) WHERE produtoID = 8
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod8.png', SINGLE_BLOB) as T1) WHERE produtoID = 8
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod9.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 9
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod9.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 9
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod10.png', SINGLE_BLOB) as T1) WHERE produtoID = 10
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod10.png', SINGLE_BLOB) as T1) WHERE produtoID = 10
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod11.png', SINGLE_BLOB) as T1) WHERE produtoID = 11
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod11.png', SINGLE_BLOB) as T1) WHERE produtoID = 11
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/proD12.png', SINGLE_BLOB) as T1) WHERE produtoID = 12
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/proD12.png', SINGLE_BLOB) as T1) WHERE produtoID = 12
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod13.png', SINGLE_BLOB) as T1) WHERE produtoID = 13
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod13.png', SINGLE_BLOB) as T1) WHERE produtoID = 13
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod14.png', SINGLE_BLOB) as T1) WHERE produtoID = 14
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod14.png', SINGLE_BLOB) as T1) WHERE produtoID = 14
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod15.png', SINGLE_BLOB) as T1) WHERE produtoID = 15
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod15.png', SINGLE_BLOB) as T1) WHERE produtoID = 15
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod16.png', SINGLE_BLOB) as T1) WHERE produtoID = 16
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod16.png', SINGLE_BLOB) as T1) WHERE produtoID = 16
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod17.png', SINGLE_BLOB) as T1) WHERE produtoID = 17
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod17.png', SINGLE_BLOB) as T1) WHERE produtoID = 17
 GO
-/*UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod18.png', SINGLE_BLOB) as T1) WHERE produtoID = 18*/
+/*UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod18.png', SINGLE_BLOB) as T1) WHERE produtoID = 18*/
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod19.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 19
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod19.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 19
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod20.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 20
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod20.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 20
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/prodFoto2/prod21.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 21
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/prodFoto2/prod21.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 21
 GO
-UPDATE tbFuncionario SET funcionarioFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/funcFoto/han.jpg', SINGLE_BLOB) as T1) WHERE funcionarioID = 1
+UPDATE tbFuncionario SET funcionarioFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/funcFoto/han.jpg', SINGLE_BLOB) as T1) WHERE funcionarioID = 1
 GO
-UPDATE tbFuncionario SET funcionarioFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/funcFoto/walter.png', SINGLE_BLOB) as T1) WHERE funcionarioID = 2
+UPDATE tbFuncionario SET funcionarioFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/funcFoto/walter.png', SINGLE_BLOB) as T1) WHERE funcionarioID = 2
 /*GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred1.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 1
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred1.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 1
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred2.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 2
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred2.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 2
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred3.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 3
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred3.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 3
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred4.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 4
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred4.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 4
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred5.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 5
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred5.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 5
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred6.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 6
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred6.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 6
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred7.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 7
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred7.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 7
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred8.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 8
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred8.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 8
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred9.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 9
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred9.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 9
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred10.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 10
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred10.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 10
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred11.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 11
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred11.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 11
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred12.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 12
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred12.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 12
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred13.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 13
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred13.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 13
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred14.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 14
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred14.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 14
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred15.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 15
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred15.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 15
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>\sblenders-db/ingFoto/ingred16.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 16*/
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/ingred16.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 16*/
+INSERT INTO tbInformacaoNutricionalTipo (
+	informacaoNutriTipoDescricao
+) VALUES (
+	'Valor Energético'
+),
+(
+	'Carboidratos'
+),
+(
+	'Proteínas'
+),
+(
+	'Gorduras Totais'
+),
+(
+	'Gorduras Saturadas'
+),
+(
+	'Gorduras Trans'
+),
+(
+	'Fibra Alimentar'
+),
+(
+	'Sódio'
+)
+GO
+INSERT INTO tbInformacaoNutricional (
+	produtoID,
+	informacaoNutriTipoID,
+	informacaoNutricionalValor
+) VALUES ( -- Nuggets
+	1,
+	1,
+	240
+),
+(
+	1,
+	2,
+	10.4
+),
+(
+	1,
+	3,
+	12
+),
+(
+	1,
+	4,
+	5
+),
+(
+	1,
+	5,
+	2.3
+),
+(
+	1,
+	6,
+	3.7
+),
+(
+	1,
+	7,
+	2.5
+),
+(
+	1,
+	8,
+	44
+),
+( -- Onion Rings
+	2,
+	1,
+	580
+),
+(
+	2,
+	2,
+	14.3
+),
+(
+	2,
+	3,
+	11
+),
+(
+	2,
+	4,
+	7
+),
+(
+	2,
+	5,
+	4.5
+),
+(
+	2,
+	6,
+	4.6
+),
+(
+	2,
+	7,
+	3.7
+),
+(
+	2,
+	8,
+	56
+),
+( -- Salada Levíssima Sblenders
+	3,
+	1,
+	110
+),
+(
+	3,
+	2,
+	6.8
+),
+(
+	3,
+	3,
+	23
+),
+(
+	3,
+	4,
+	9
+),
+(
+	3,
+	5,
+	6.9
+),
+(
+	3,
+	6,
+	1.2
+),
+(
+	3,
+	7,
+	1.6
+),
+(
+	3,
+	8,
+	22
+),
+( -- Frango Frito
+	4,
+	1,
+	500
+),
+(
+	4,
+	2,
+	21
+),
+(
+	4,
+	3,
+	22
+),
+(
+	4,
+	4,
+	6
+),
+(
+	4,
+	5,
+	5.2
+),
+(
+	4,
+	6,
+	4.1
+),
+(
+	4,
+	7,
+	1.6
+),
+(
+	4,
+	8,
+	23
+),
+( -- Lata de Refrigerante Coca-Cola
+	5,
+	1,
+	43
+),
+(
+	5,
+	2,
+	11
+),
+(
+	5,
+	3,
+	12
+),
+(
+	5,
+	4,
+	5
+),
+(
+	5,
+	5,
+	2.2
+),
+(
+	5,
+	6,
+	3.2
+),
+(
+	5,
+	7,
+	23
+),
+(
+	5,
+	8,
+	18
+),
+( -- Lata de Refrigerante Fanta Sabor Laranja
+	6,
+	1,
+	108
+),
+(
+	6,
+	2,
+	26
+),
+(
+	6,
+	3,
+	0
+),
+(
+	6,
+	4,
+	0
+),
+(
+	6,
+	5,
+	1.5
+),
+(
+	6,
+	6,
+	2.3
+),
+(
+	6,
+	7,
+	2.6
+),
+(
+	6,
+	8,
+	110
+),
+( -- Lata de Refrigerante Guaraná
+	7,
+	1,
+	240
+),
+(
+	7,
+	2,
+	146
+),
+(
+	7,
+	3,
+	36
+),
+(
+	7,
+	4,
+	0
+),
+(
+	7,
+	5,
+	0
+),
+(
+	7,
+	6,
+	3.7
+),
+(
+	7,
+	7,
+	2.3
+),
+(
+	7,
+	8,
+	27
+),
+( -- Garrafa de Refrigerante H20H Limoneto
+	8,
+	1,
+	140
+),
+(
+	8,
+	2,
+	12
+),
+(
+	8,
+	3,
+	9
+),
+(
+	8,
+	4,
+	0
+),
+(
+	8,
+	5,
+	1.2
+),
+(
+	8,
+	6,
+	1.27
+),
+(
+	8,
+	7,
+	2.6
+),
+(
+	8,
+	8,
+	56
+),
+( -- Água Fiji
+	9,
+	1,
+	20
+),
+(
+	9,
+	2,
+	2.4
+),
+(
+	9,
+	3,
+	9
+),
+(
+	9,
+	4,
+	3
+),
+(
+	9,
+	5,
+	0.3
+),
+(
+	9,
+	6,
+	2.7
+),
+(
+	9,
+	7,
+	2.5
+),
+(
+	9,
+	8,
+	44
+),
+( -- Sundae de Chocolate Sblenders
+	10,
+	1,
+	500
+),
+(
+	10,
+	2,
+	12.4
+),
+(
+	10,
+	3,
+	13
+),
+(
+	10,
+	4,
+	6
+),
+(
+	10,
+	5,
+	1.4
+),
+(
+	10,
+	6,
+	2.9
+),
+(
+	10,
+	7,
+	2.6
+),
+(
+	10,
+	8,
+	44
+),
+( -- Milk Shake de Morango
+	11,
+	1,
+	500
+),
+(
+	11,
+	2,
+	14
+),
+(
+	11,
+	3,
+	8
+),
+(
+	11,
+	4,
+	5
+),
+(
+	11,
+	5,
+	3.2
+),
+(
+	11,
+	6,
+	2.2
+),
+(
+	11,
+	7,
+	3
+),
+(
+	11,
+	8,
+	56
+),
+( -- Casquinha de Creme
+	12,
+	1,
+	300
+),
+(
+	12,
+	2,
+	12
+),
+(
+	12,
+	3,
+	9.6
+),
+(
+	12,
+	4,
+	6
+),
+(
+	12,
+	5,
+	4.2
+),
+(
+	12,
+	6,
+	2.43
+),
+(
+	12,
+	7,
+	2
+),
+(
+	12,
+	8,
+	33
+),
+( -- Casquinha de Açaí
+	13,
+	1,
+	350
+),
+(
+	13,
+	2,
+	12.4
+),
+(
+	13,
+	3,
+	7
+),
+(
+	13,
+	4,
+	6
+),
+(
+	13,
+	5,
+	3
+),
+(
+	13,
+	6,
+	2.5
+),
+(
+	13,
+	7,
+	1.6
+),
+(
+	13,
+	8,
+	34
+),
+( -- Molho Barbecue
+	14,
+	1,
+	150
+),
+(
+	14,
+	2,
+	12.4
+),
+(
+	14,
+	3,
+	10
+),
+(
+	14,
+	4,
+	6
+),
+(
+	14,
+	5,
+	3
+),
+(
+	14,
+	6,
+	4
+),
+(
+	14,
+	7,
+	3.2
+),
+(
+	14,
+	8,
+	64
+),
+( -- Molho de Tomate
+	15,
+	1,
+	150
+),
+(
+	15,
+	2,
+	11
+),
+(
+	15,
+	3,
+	15
+),
+(
+	15,
+	4,
+	6
+),
+(
+	15,
+	5,
+	3.5
+),
+(
+	15,
+	6,
+	2.6
+),
+(
+	15,
+	7,
+	4.5
+),
+(
+	15,
+	8,
+	65
+),
+( -- Molho de Queijo
+	16,
+	1,
+	150
+),
+(
+	16,
+	2,
+	9.3
+),
+(
+	16,
+	3,
+	10
+),
+(
+	16,
+	4,
+	2
+),
+(
+	16,
+	5,
+	1.3
+),
+(
+	16,
+	6,
+	4
+),
+(
+	16,
+	7,
+	3.2
+),
+(
+	16,
+	8,
+	64
+),
+( -- Molho de Mostarda
+	17,
+	1,
+	150
+),
+(
+	17,
+	2,
+	9.2
+),
+(
+	17,
+	3,
+	13
+),
+(
+	17,
+	4,
+	6
+),
+(
+	17,
+	5,
+	2.2
+),
+(
+	17,
+	6,
+	2.9
+),
+(
+	17,
+	7,
+	2.6
+),
+(
+	17,
+	8,
+	54
+),
+( -- Sblurger
+	18,
+	1,
+	300
+),
+(
+	18,
+	2,
+	12.4
+),
+(
+	18,
+	3,
+	11
+),
+(
+	18,
+	4,
+	3
+),
+(
+	18,
+	5,
+	2.4
+),
+(
+	18,
+	6,
+	3.1
+),
+(
+	18,
+	7,
+	2.4
+),
+(
+	18,
+	8,
+	38
+),
+( -- Itubaína
+	19,
+	1,
+	120
+),
+(
+	19,
+	2,
+	10
+),
+(
+	19,
+	3,
+	11
+),
+(
+	19,
+	4,
+	5
+),
+(
+	19,
+	5,
+	2
+),
+(
+	19,
+	6,
+	3
+),
+(
+	19,
+	7,
+	3.1
+),
+(
+	19,
+	8,
+	32
+),
+( -- Del Vale
+	20,
+	1,
+	130
+),
+(
+	20,
+	2,
+	12.4
+),
+(
+	20,
+	3,
+	13
+),
+(
+	20,
+	4,
+	5.6
+),
+(
+	20,
+	5,
+	3
+),
+(
+	20,
+	6,
+	4
+),
+(
+	20,
+	7,
+	3.3
+),
+(
+	20,
+	8,
+	55
+),
+( -- BAER-MATE
+	21,
+	1,
+	160
+),
+(
+	21,
+	2,
+	9.4
+),
+(
+	21,
+	3,
+	9
+),
+(
+	21,
+	4,
+	4.8
+),
+(
+	21,
+	5,
+	3.2
+),
+(
+	21,
+	6,
+	2.2
+),
+(
+	21,
+	7,
+	1.9
+),
+(
+	21,
+	8,
+	60
+)
 /*
 use master
 drop database dbSblenders
