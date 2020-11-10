@@ -68,11 +68,12 @@ INSERT INTO tbProduto(categoriaProdutoID, produtoNome, produtoCusto, produtoDesc
 (2, 'Itubaína©', 5, 'Refrigerante Itubaína em garrafa'), (2, 'Del Vale© Maracujá', 6.5, 'Suco de maracujá em lata'), (2, 'BÆR-MATE®', 7, 'Chá mate')
 GO
 INSERT INTO tbProdutoIngrediente (ingredienteID, produtoID, quantidadePadrao, novoPreco) VALUES (1,18,1,2.5),(2,18,1,3),(3,18,1,2),(4,18,1,1.5),(5,18,1,2),(6,18,1,3),
-(7,18,1,3),(8,18,1,3),(9,18,1,2.5),(10,18,1,2.5)
+(7,18,1,3),(8,18,1,3),(9,18,1,2.5),(10,18,1,2.5),(11,18,1,2.5),(12,18,1,3),(13,18,1,2),(14,18,1,1.5),(15,18,1,2),(16,18,1,3),(17,18,1,3),(18,18,1,3),(19,18,1,2.5),(20,18,1,2.5),(21,18,1,2.5),(22,18,1,3),
+(23,18,1,2),(24,18,1,1.5),(25,18,1,2),(26,18,1,3),(27,18,1,3),(28,18,1,3),(29,18,1,2.5)
 GO
 INSERT INTO tbPedidoProduto(pedidoID, produtoID, pedidoProdutoQtde) VALUES (1, 18, 3), (2, 3, 4), (3, 5, 5), (4, 7, 6)
 GO
-INSERT INTO tbPedidoProdutoIngrediente(pedidoProdutoID, produtoIngredienteID, quantidadeIngrediente) VALUES (1, 1, 1), (1, 9, 3), (1, 3, 4), (1, 4, 7) -- Fiz só com os dois utilizados no insert da tbProdutoIngrediente
+INSERT INTO tbPedidoProdutoIngrediente(pedidoProdutoID, produtoIngredienteID, quantidadeIngrediente) VALUES (1, 1, 1), (1, 14, 3), (1, 12, 4), (1, 16, 7) -- Fiz só com os dois utilizados no insert da tbProdutoIngrediente
 GO
 INSERT INTO tbAgente(
 	tipoAgenteID,
@@ -282,7 +283,7 @@ GO
 UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/ingred15.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 15
 GO
 UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/ingred16.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 16*/
-INSERT INTO tbInformacaoNutricionalTipo (
+/*INSERT INTO tbInformacaoNutricionalTipo (
 	informacaoNutriTipoDescricao
 ) VALUES (
 	'Valor Energético'
@@ -1152,7 +1153,7 @@ INSERT INTO tbInformacaoNutricional (
 	21,
 	8,
 	60
-)
+)*/
 /*
 use master
 drop database dbSblenders
