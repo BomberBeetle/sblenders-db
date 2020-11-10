@@ -138,21 +138,6 @@ INSERT INTO tbIngrediente (
 	ingredienteFoto
 )
 SELECT
-	1,
-	'Pão Italiano Integral',
-	10.0,
-	'Pão italiano feito com massa integral e com sementes.',
-	BulkColumn
-FROM Openrowset(Bulk 'C:\Users\guime\Documents\GitHub\sblenders-db/ingFoto/italiano.jpeg', Single_Blob) as Image
-GO
-INSERT INTO tbIngrediente (
-	categoriaIngredienteID,
-	ingredienteNome,
-	ingredienteCusto,
-	ingredienteDescricao,
-	ingredienteFoto
-)
-SELECT
 	2,
 	'Fígado Acebolado',
 	12.0,
