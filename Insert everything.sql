@@ -56,15 +56,15 @@ INSERT INTO tbEstoqueIngrediente(ingredienteID, restauranteID, estoqueIngredient
 GO
 INSERT INTO tbCategoriaProduto(categoriaProdutoNome) VALUES ('Acompanhamento'), ('Bebida'), ('Sobremesa'), ('Molho'), ('Customizavel')
 GO
-INSERT INTO tbProduto(categoriaProdutoID, produtoNome, produtoCusto, produtoDescricao) VALUES (1,'Nuggets de Frango, 6 unidades, 240 kcal',3.49,'Nuggets de Frango crocantes e temperados'),
-(1,'Onion Rings, 14 unidades, 580 kcal',6.65,'Cebolas em formatos de anéis, empanados e fritos, muito croncantes e temperadas'),(1,'Salada Levissíma Sblenders, 110 kcal',4.45,'Salada de alface, tomate e pepino'),
-(1,'Frango Frito, 12 unidades, 500 kcal',6.73,'Frangos Fritos temperados com sal, pimenta e o tempero especial Sblenders'),(2,'Lata de Refrigerante Coca-Cola, 350ml',3.98,'Refrigerante Coca-Cola, 350ml'),
+INSERT INTO tbProduto(categoriaProdutoID, produtoNome, produtoCusto, produtoDescricao) VALUES (1,'Nuggets de Frango, 6 unidades',3.49,'Nuggets de Frango crocantes e temperados'),
+(1,'Onion Rings, 14 unidades',6.65,'Cebolas em formatos de anéis, empanados e fritos, muito croncantes e temperadas'),(1,'Salada Levissíma Sblenders',4.45,'Salada de alface, tomate e pepino'),
+(1,'Frango Frito, 12 unidades',6.73,'Frangos Fritos temperados com sal, pimenta e o tempero especial Sblenders'),(2,'Lata de Refrigerante Coca-Cola, 350ml',3.98,'Refrigerante Coca-Cola, 350ml'),
 (2,'Lata de Refrigerante Fanta Sabor Laranja, 350ml',3.42,'Refrigerante Fanta Sabor Laranja, 350ml'),(2,'Lata de Refrigerante Guaraná, 350ml',3.55,'Refrigerante Guaraná, 350ml'),
-(2,'Garrafa de Refrigerante H2OH Limoneto, 500ml',4.50,'Refrigerante H2OH Limoneto, 500ml'), (2, 'Água Fiji', 5, 'Água importada diretamente de Fiji'), (3,'Sundae de Chocolate Sblenders, 500kcal', 6.54, 'Sundae de Chocolate, 500kcal'),
-(3,'Milk Shake de Morango, 400ml, 550kcal',6.78,'Milk Shake de Morango, 400ml, 550kcal'),(3,'Casquinha de Creme, 200mg, 300kcal',2.20,'Casquina de Creme, 200mg, 300kcal'),
-(3,'Casquinha de Açaí, 200mg, 350kcal',2.20,'Casquina de Açaí, 200mg, 350kcal'),(4,'Molho Barbecue, 100mg, 150kcal',1.70,'Molho Barbecue, 100mg, 150kcal'),
-(4,'Molho de Tomate, 100mg, 150kcal',1.70,'Molho de Tomate, 100mg, 150kcal'),(4,'Molho de Queijo, 100mg, 150kcal',1.70,'Molho de Queijo, 100mg, 150kcal'),
-(4,'Molho de Mostarda, 100mg, 150kcal',1.70,'Molho de Mostarda, 100mg, 150kcal'),(5,'Sblurger',0.0,'Monte seu Sblurger'),
+(2,'Garrafa de Refrigerante H2OH Limoneto, 500ml',4.50,'Refrigerante H2OH Limoneto, 500ml'), (2, 'Água Fiji', 5, 'Água importada diretamente de Fiji'), (3,'Sundae de Chocolate Sblenders', 6.54, 'Sundae de Chocolate'),
+(3,'Milk Shake de Morango, 400ml',6.78,'Milk Shake de Morango, 400ml'),(3,'Casquinha de Creme, 200mg',2.20,'Casquina de Creme, 200mg'),
+(3,'Casquinha de Açaí, 200mg',2.20,'Casquina de Açaí, 200mg'),(4,'Molho Barbecue, 100mg',1.70,'Molho Barbecue, 100mg'),
+(4,'Molho de Tomate, 100mg',1.70,'Molho de Tomate, 100mg'),(4,'Molho de Queijo, 100mg',1.70,'Molho de Queijo, 100mg'),
+(4,'Molho de Mostarda, 100mg',1.70,'Molho de Mostarda, 100mg'),(5,'Sblurger',0.0,'Monte seu Sblurger'),
 (2, 'Itubaína©', 5, 'Refrigerante Itubaína em garrafa'), (2, 'Del Vale© Maracujá', 6.5, 'Suco de maracujá em lata'), (2, 'BÆR-MATE®', 7, 'Chá mate')
 GO
 INSERT INTO tbProdutoIngrediente (ingredienteID, produtoID, quantidadePadrao, novoPreco) VALUES (1,18,1,2.5),(2,18,1,3),(3,18,1,2),(4,18,1,1.5),(5,18,1,2),(6,18,1,3),
@@ -170,7 +170,7 @@ INSERT INTO tbProduto (
 )
 SELECT
 	1,
-	'Batatas Rústicas com Ketchup, 15 unidades, 500 kcal',
+	'Batatas Rústicas com Ketchup, 15 unidades',
 	8.0,
 	'Grandes fatias de batatas fritas no óleo de girassol, acompanhadas de ketchup',
 	BulkColumn
@@ -200,7 +200,7 @@ INSERT INTO tbProduto (
 )
 SELECT
 	3,
-	'Paleta Mexicana de Morango, 500 kcal',
+	'Paleta Mexicana de Morango',
 	8.0,
 	'Picolé feito com extrato de morango, recheado com leite condesado Nestlé® Moça',
 	BulkColumn
@@ -283,7 +283,8 @@ GO
 UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/ingred15.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 15
 GO
 UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/ingred16.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 16*/
-/*INSERT INTO tbInformacaoNutricionalTipo (
+GO
+INSERT INTO tbInformacaoNutricionalTipo (
 	informacaoNutriTipoDescricao
 ) VALUES (
 	'Valor Energético'
@@ -1153,7 +1154,7 @@ INSERT INTO tbInformacaoNutricional (
 	21,
 	8,
 	60
-)*/
+)
 /*
 use master
 drop database dbSblenders
