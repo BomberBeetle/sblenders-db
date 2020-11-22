@@ -45,7 +45,8 @@ INSERT INTO tbIngrediente(categoriaIngredienteID, ingredienteNome, ingredienteCu
 (1, 'Pão italiano integral (fatia inferior)', 3.5, 'Fatia inferior de pão italiano integral'), (1, 'Pão de hambúrguer sem gergelim (fatia superior)', 2.5, 'Fatia superior de pão de hambúrguer sem gergelim'),
 (1, 'Pão de hambúrguer sem gergelim (fatia inferior)', 2.5, 'Fatia inferior de pão de hambúrguer sem gergelim'), (1, 'Pão de hambúguer com gergelim (fatia superior)', 3, 'Fatia superior de pão de hambúrguer com gergelim'),
 (1, 'Pão de hambúrguer com gergelim (fatia inferior)', 3, 'Fatia inferior de pão de hambúrguer com gergelim'), (2, 'Frango', 2.5, 'Frango cozido desfiado'),
-(2, 'Hambúrguer', 3, 'Hambúrguer de carne'), (2, 'Hambúrguer à la Sblenders', 4, 'Hambúrguer à moda da casa'), (2, 'Filé de Peixe', 2.5, 'Filé de tilápia'), (3, 'Pepino', 1, 'Rodelas de pepino'),
+(2, 'Hambúrguer', 3, 'Hambúrguer de carne'), (2, 'Hambúrguer à la Sblenders', 4, 'Hambúrguer à moda da casa'), (2, 'Filé de Peixe', 2.5, 'Filé de tilápia'),
+(2, 'Fígado Acebolado', 12.0, 'Filé de fígado acebolado feito no óleo de soja.'), (3, 'Pepino', 1, 'Rodelas de pepino'), (3, 'Coentro', 5.0, 'Folhas de coentro fresco.'),
 (3, 'Tomate', 1, 'Rodela de tomate'), (3, 'Alface', 1, 'Folha de alface'), (3, 'Jiló', 1, 'Cubo de jiló'), (3, 'Pimenta jalapenho', 2, 'Rodelas de pimenta jalapenho'),
 (3, 'Picles', 2, 'Rodelas de picles'), (4, 'Cheddar', 3, 'Fatia de queijo cheddar'), (4, 'Parmesão', 2.5, 'Queijo parmesão ralado'), (4, 'Provolone', 3, 'Quejio provolone ralado'),
 (4, 'Muçarela', 2, 'Fatia de queijo muçarela'), (4, 'Queijo branco', 3, 'Fatia de queijo branco'), (5, 'Ketchup', 3, 'Molho ketchup'), (5, 'Mostarda', 3, 'Molho de mostarda'), (5, 'Maionese', 3, 'Molho maionese'),
@@ -58,14 +59,16 @@ INSERT INTO tbCategoriaProduto(categoriaProdutoNome) VALUES ('Acompanhamento'), 
 GO
 INSERT INTO tbProduto(categoriaProdutoID, produtoNome, produtoCusto, produtoDescricao) VALUES (1,'Nuggets de Frango, 6 unidades',3.49,'Nuggets de Frango crocantes e temperados'),
 (1,'Onion Rings, 14 unidades',6.65,'Cebolas em formatos de anéis, empanados e fritos, muito croncantes e temperadas'),(1,'Salada Levissíma Sblenders',4.45,'Salada de alface, tomate e pepino'),
-(1,'Frango Frito, 12 unidades',6.73,'Frangos Fritos temperados com sal, pimenta e o tempero especial Sblenders'),(2,'Lata de Refrigerante Coca-Cola, 350ml',3.98,'Refrigerante Coca-Cola, 350ml'),
+(1,'Frango Frito, 12 unidades',6.73,'Frangos Fritos temperados com sal, pimenta e o tempero especial Sblenders'),
+(1, 'Batatas Rústicas com Ketchup, 15 unidades', 8.0, 'Grandes fatias de batatas fritas no óleo de girassol, acompanhadas de ketchup'), (2,'Lata de Refrigerante Coca-Cola, 350ml',3.98,'Refrigerante Coca-Cola, 350ml'),
 (2,'Lata de Refrigerante Fanta Sabor Laranja, 350ml',3.42,'Refrigerante Fanta Sabor Laranja, 350ml'),(2,'Lata de Refrigerante Guaraná, 350ml',3.55,'Refrigerante Guaraná, 350ml'),
-(2,'Garrafa de Refrigerante H2OH Limoneto, 500ml',4.50,'Refrigerante H2OH Limoneto, 500ml'), (2, 'Água Fiji', 5, 'Água importada diretamente de Fiji'), (3,'Sundae de Chocolate Sblenders', 6.54, 'Sundae de Chocolate'),
+(2,'Garrafa de Refrigerante H2OH Limoneto, 500ml',4.50,'Refrigerante H2OH Limoneto, 500ml'), (2, 'Água Fiji', 5, 'Água importada diretamente de Fiji'), 
+(2, 'Itubaína©', 5, 'Refrigerante Itubaína em garrafa'), (2, 'Del Vale© Maracujá', 6.5, 'Suco de maracujá em lata'), (2, 'BÆR-MATE®', 7, 'Chá mate'),
+(3,'Sundae de Chocolate Sblenders', 6.54, 'Sundae de Chocolate'), (3, 'Paleta Mexicana de Morango', 8.0, 'Picolé feito com extrato de morango, recheado com leite condesado Nestlé® Moça'),
 (3,'Milk Shake de Morango, 400ml',6.78,'Milk Shake de Morango, 400ml'),(3,'Casquinha de Creme, 200mg',2.20,'Casquina de Creme, 200mg'),
 (3,'Casquinha de Açaí, 200mg',2.20,'Casquina de Açaí, 200mg'),(4,'Molho Barbecue, 100mg',1.70,'Molho Barbecue, 100mg'),
 (4,'Molho de Tomate, 100mg',1.70,'Molho de Tomate, 100mg'),(4,'Molho de Queijo, 100mg',1.70,'Molho de Queijo, 100mg'),
-(4,'Molho de Mostarda, 100mg',1.70,'Molho de Mostarda, 100mg'),(5,'Sblurger',0.0,'Monte seu Sblurger'),
-(2, 'Itubaína©', 5, 'Refrigerante Itubaína em garrafa'), (2, 'Del Vale© Maracujá', 6.5, 'Suco de maracujá em lata'), (2, 'BÆR-MATE®', 7, 'Chá mate')
+(4,'Molho de Mostarda, 100mg',1.70,'Molho de Mostarda, 100mg'),(5,'Sblurger',0.0,'Monte seu Sblurger')
 GO
 INSERT INTO tbProdutoIngrediente (ingredienteID, produtoID, quantidadePadrao, novoPreco) VALUES (1,18,1,2.5),(2,18,1,3),(3,18,1,2),(4,18,1,1.5),(5,18,1,2),(6,18,1,3),
 (7,18,1,3),(8,18,1,3),(9,18,1,2.5),(10,18,1,2.5),(11,18,1,2.5),(12,18,1,3),(13,18,1,2),(14,18,1,1.5),(15,18,1,2),(16,18,1,3),(17,18,1,3),(18,18,1,3),(19,18,1,2.5),(20,18,1,2.5),(21,18,1,2.5),(22,18,1,3),
@@ -130,192 +133,126 @@ SELECT
 	2,
 	BulkColumn
 FROM Openrowset(Bulk '<caminho>/funcFoto/Rafael.jpg', Single_Blob) as Image
-GO -- Inserts para ingrediente
-INSERT INTO tbIngrediente (
-	categoriaIngredienteID,
-	ingredienteNome,
-	ingredienteCusto,
-	ingredienteDescricao,
-	ingredienteFoto
-)
-SELECT
-	2,
-	'Fígado Acebolado',
-	12.0,
-	'Filé de fígado acebolado feito no óleo de soja.',
-	BulkColumn
-FROM Openrowset(Bulk '<caminho>/ingFoto/figado.jpg', Single_Blob) as Image
+GO -- Update Fotos Produtos 
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod1.png', SINGLE_BLOB) as T1) WHERE produtoID = 1
 GO
-INSERT INTO tbIngrediente (
-	categoriaIngredienteID,
-	ingredienteNome,
-	ingredienteCusto,
-	ingredienteDescricao,
-	ingredienteFoto
-)
-SELECT
-	3,
-	'Coentro',
-	5.0,
-	'Folhas de coentro fresco.',
-	BulkColumn
-FROM Openrowset(Bulk '<caminho>/ingFoto/coentro.jpg', Single_Blob) as Image
-GO -- Inserts de produto
-INSERT INTO tbProduto (
-	categoriaProdutoID,
-	produtoNome,
-	produtoCusto,
-	produtoDescricao,
-	produtoFoto
-)
-SELECT
-	1,
-	'Batatas Rústicas com Ketchup, 15 unidades',
-	8.0,
-	'Grandes fatias de batatas fritas no óleo de girassol, acompanhadas de ketchup',
-	BulkColumn
-FROM Openrowset(Bulk '<caminho>/prodFoto/frita.jpg', Single_Blob) as Image
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod2.png', SINGLE_BLOB) as T1) WHERE produtoID = 2
 GO
-INSERT INTO tbProduto (
-	categoriaProdutoID,
-	produtoNome,
-	produtoCusto,
-	produtoDescricao,
-	produtoFoto
-)
-SELECT
-	2,
-	'Lata de Coca-Cola© Zero, 350 ml',
-	8.0,
-	'Refrigerante Coca-Cola© Zero Açúcar',
-	BulkColumn
-FROM Openrowset(Bulk '<caminho>/prodFoto/coca.jpg', Single_Blob) as Image
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod3.png', SINGLE_BLOB) as T1) WHERE produtoID = 3
 GO
-INSERT INTO tbProduto (
-	categoriaProdutoID,
-	produtoNome,
-	produtoCusto,
-	produtoDescricao,
-	produtoFoto
-)
-SELECT
-	3,
-	'Paleta Mexicana de Morango',
-	8.0,
-	'Picolé feito com extrato de morango, recheado com leite condesado Nestlé® Moça',
-	BulkColumn
-FROM Openrowset(Bulk '<caminho>/prodFoto/morango.png', Single_Blob) as Image
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod4.png', SINGLE_BLOB) as T1) WHERE produtoID = 4
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod1.png', SINGLE_BLOB) as T1) WHERE produtoID = 1
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod5.png', SINGLE_BLOB) as T1) WHERE produtoID = 5
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod2.png', SINGLE_BLOB) as T1) WHERE produtoID = 2
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod6.png', SINGLE_BLOB) as T1) WHERE produtoID = 6
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod3.png', SINGLE_BLOB) as T1) WHERE produtoID = 3
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod6.png', SINGLE_BLOB) as T1) WHERE produtoID = 6
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod4.png', SINGLE_BLOB) as T1) WHERE produtoID = 4
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod7.png', SINGLE_BLOB) as T1) WHERE produtoID = 7
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod5.png', SINGLE_BLOB) as T1) WHERE produtoID = 5
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod8.png', SINGLE_BLOB) as T1) WHERE produtoID = 8
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod6.png', SINGLE_BLOB) as T1) WHERE produtoID = 6
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod9.png', SINGLE_BLOB) as T1) WHERE produtoID = 9
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod7.png', SINGLE_BLOB) as T1) WHERE produtoID = 7
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod10.png', SINGLE_BLOB) as T1) WHERE produtoID = 10
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod8.png', SINGLE_BLOB) as T1) WHERE produtoID = 8
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod11.png', SINGLE_BLOB) as T1) WHERE produtoID = 11
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod9.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 9
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod12.png', SINGLE_BLOB) as T1) WHERE produtoID = 12
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod10.png', SINGLE_BLOB) as T1) WHERE produtoID = 10
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod13.png', SINGLE_BLOB) as T1) WHERE produtoID = 13
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod11.png', SINGLE_BLOB) as T1) WHERE produtoID = 11
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod14.png', SINGLE_BLOB) as T1) WHERE produtoID = 14
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/proD12.png', SINGLE_BLOB) as T1) WHERE produtoID = 12
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod15.png', SINGLE_BLOB) as T1) WHERE produtoID = 15
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod13.png', SINGLE_BLOB) as T1) WHERE produtoID = 13
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod16.png', SINGLE_BLOB) as T1) WHERE produtoID = 16
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod14.png', SINGLE_BLOB) as T1) WHERE produtoID = 14
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod17.png', SINGLE_BLOB) as T1) WHERE produtoID = 17
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod15.png', SINGLE_BLOB) as T1) WHERE produtoID = 15
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod18.png', SINGLE_BLOB) as T1) WHERE produtoID = 18
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod16.png', SINGLE_BLOB) as T1) WHERE produtoID = 16
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod19.png', SINGLE_BLOB) as T1) WHERE produtoID = 19
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod17.png', SINGLE_BLOB) as T1) WHERE produtoID = 17
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod20.png', SINGLE_BLOB) as T1) WHERE produtoID = 20
 GO
-/*UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod18.png', SINGLE_BLOB) as T1) WHERE produtoID = 18*/
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod21.png', SINGLE_BLOB) as T1) WHERE produtoID = 21
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod19.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 19
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod22.png', SINGLE_BLOB) as T1) WHERE produtoID = 22
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod20.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 20
-GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto2/prod21.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 21
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod23.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 23
 GO
 UPDATE tbFuncionario SET funcionarioFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/funcFoto/han.jpg', SINGLE_BLOB) as T1) WHERE funcionarioID = 1
 GO
 UPDATE tbFuncionario SET funcionarioFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/funcFoto/walter.png', SINGLE_BLOB) as T1) WHERE funcionarioID = 2
+GO -- Update Fotos Ingredientes
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_forma_int_sup.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 1
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 1
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_forma_int_inf.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 2
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 2
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_frances_sup.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 3
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 3
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_frances_inf.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 4
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 4
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_italiano_int_sup.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 5
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 5
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_italiano_int_inf.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 6
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 6
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_hamburguer_sup.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 7
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 7
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_hamburguer_inf.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 8
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 8
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_hamburguer_gerg_sup.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 9
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 9
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pao_hamburguer_gerg_inf.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 10
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 10
-GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/frango.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 11
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/frango.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 11
 GO
 UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/hamburguer.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 12
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 13
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/hamburguer_sblenders.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 13
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/peixe.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 14
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/peixe.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 14
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 15
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/figado.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 15
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/tomate.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 16
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 16
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/alface.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 17
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/coentro.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 17
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/jilo.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 18
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/tomate.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 18
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/jalapenho.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 19
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/alface.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 19
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/picles.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 20
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/jilo.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 20
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/cheddar.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 21
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/jalapenho.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 21
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/parmesao.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 22
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/picles.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 22
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/provolone.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 23
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/cheddar.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 23
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/mucarela.jpeg', SINGLE_BLOB) as T1) WHERE ingredienteID = 24
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/parmesao.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 24
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/branco.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 25
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/provolone.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 25
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/ketchup.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 26
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/mucarela.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 26
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/mostarda.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 27
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/queijo_branco.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 27
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/maionese.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 28
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/ketchup.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 28
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/pepino.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 29
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/mostarda.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 29
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/chocolate.jpg', SINGLE_BLOB) as T1) WHERE ingredienteID = 30
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/maionese.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 30
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/morango.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 31
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/especial_sblenders.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 31
 GO
-UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/caramelo.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 32
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/chocolate.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 32
 GO
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/morango.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 33
+GO
+UPDATE tbIngrediente SET ingredienteFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/ingFoto/caramelo.png', SINGLE_BLOB) as T1) WHERE ingredienteID = 34
 INSERT INTO tbInformacaoNutricionalTipo (
 	informacaoNutriTipoDescricao
 ) VALUES (
