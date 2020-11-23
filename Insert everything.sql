@@ -70,11 +70,11 @@ INSERT INTO tbProduto(categoriaProdutoID, produtoNome, produtoCusto, produtoDesc
 (4,'Molho de Tomate, 100mg',1.70,'Molho de Tomate, 100mg'),(4,'Molho de Queijo, 100mg',1.70,'Molho de Queijo, 100mg'),
 (4,'Molho de Mostarda, 100mg',1.70,'Molho de Mostarda, 100mg'),(5,'Sblurger',0.0,'Monte seu Sblurger')
 GO
-INSERT INTO tbProdutoIngrediente (ingredienteID, produtoID, quantidadePadrao, novoPreco) VALUES (1,18,1,2.5),(2,18,1,3),(3,18,1,2),(4,18,1,1.5),(5,18,1,2),(6,18,1,3),
-(7,18,1,3),(8,18,1,3),(9,18,1,2.5),(10,18,1,2.5),(11,18,1,2.5),(12,18,1,3),(13,18,1,2),(14,18,1,1.5),(15,18,1,2),(16,18,1,3),(17,18,1,3),(18,18,1,3),(19,18,1,2.5),(20,18,1,2.5),(21,18,1,2.5),(22,18,1,3),
-(23,18,1,2),(24,18,1,1.5),(25,18,1,2),(26,18,1,3),(27,18,1,3),(28,18,1,3),(29,18,1,2.5)
+INSERT INTO tbProdutoIngrediente (ingredienteID, produtoID, quantidadePadrao, novoPreco) VALUES (1,23,1,2.5),(2,23,1,3),(3,23,1,2),(4,23,1,1.5),(5,23,1,2),(6,23,1,3),
+(7,23,1,3),(8,23,1,3),(9,23,1,2.5),(10,23,1,2.5),(11,23,1,2.5),(12,23,1,3),(13,23,1,2),(14,23,1,1.5),(15,23,1,2),(16,23,1,3),(17,23,1,3),(23,23,1,3),(19,23,1,2.5),(20,23,1,2.5),(21,23,1,2.5),(22,23,1,3),
+(23,23,1,2),(24,23,1,1.5),(25,23,1,2),(26,23,1,3),(27,23,1,3),(28,23,1,3),(29,23,1,2.5)
 GO
-INSERT INTO tbPedidoProduto(pedidoID, produtoID, pedidoProdutoQtde) VALUES (1, 18, 3), (2, 3, 4), (3, 5, 5), (4, 7, 6)
+INSERT INTO tbPedidoProduto(pedidoID, produtoID, pedidoProdutoQtde) VALUES (1, 23, 3), (2, 3, 4), (3, 5, 5), (4, 7, 6)
 GO
 INSERT INTO tbPedidoProdutoIngrediente(pedidoProdutoID, produtoIngredienteID, quantidadeIngrediente) VALUES (1, 1, 1), (1, 14, 3), (1, 12, 4), (1, 16, 7) -- Fiz só com os dois utilizados no insert da tbProdutoIngrediente
 GO
@@ -965,42 +965,42 @@ INSERT INTO tbInformacaoNutricional (
 	54
 ),
 ( -- Sblurger
-	18,
+	23,
 	1,
 	300
 ),
 (
-	18,
+	23,
 	2,
 	12.4
 ),
 (
-	18,
+	23,
 	3,
 	11
 ),
 (
-	18,
+	23,
 	4,
 	3
 ),
 (
-	18,
+	23,
 	5,
 	2.4
 ),
 (
-	18,
+	23,
 	6,
 	3.1
 ),
 (
-	18,
+	23,
 	7,
 	2.4
 ),
 (
-	18,
+	23,
 	8,
 	38
 ),
