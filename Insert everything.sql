@@ -180,7 +180,7 @@ UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/pro
 GO
 UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod22.png', SINGLE_BLOB) as T1) WHERE produtoID = 22
 GO
-UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod23.jpg', SINGLE_BLOB) as T1) WHERE produtoID = 23
+UPDATE tbProduto SET produtoFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/prodFoto/prod23.png', SINGLE_BLOB) as T1) WHERE produtoID = 23
 GO
 UPDATE tbFuncionario SET funcionarioFoto = (SELECT * FROM OPENROWSET(BULK '<caminho>/funcFoto/han.jpg', SINGLE_BLOB) as T1) WHERE funcionarioID = 1
 GO
