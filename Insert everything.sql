@@ -58,7 +58,7 @@ GO
 INSERT INTO tbCategoriaProduto(categoriaProdutoNome) VALUES ('Acompanhamento'), ('Bebida'), ('Sobremesa'), ('Molho'), ('Customizavel')
 GO
 INSERT INTO tbProduto(categoriaProdutoID, produtoNome, produtoCusto, produtoDescricao) VALUES (1,'Nuggets de Frango, 6 unidades',3.49,'Nuggets de Frango crocantes e temperados'),
-(1,'Onion Rings, 14 unidades',6.65,'Cebolas em formatos de anéis, empanados e fritos, muito croncantes e temperadas'),(1,'Salada Levissíma Sblenders',4.45,'Salada de alface, tomate e pepino'),
+(1,'Onion Rings, 14 unidades',6.65,'Cebolas em formatos de anéis, empanados e fritos, muito croncantes e temperadas'),(1,'Salada Levíssima Sblenders',4.45,'Salada de alface, tomate e pepino'),
 (1,'Frango Frito, 12 unidades',6.73,'Frangos Fritos temperados com sal, pimenta e o tempero especial Sblenders'),
 (1, 'Batatas Rústicas com Ketchup, 15 unidades', 8.0, 'Grandes fatias de batatas fritas no óleo de girassol, acompanhadas de ketchup'), (2,'Lata de Refrigerante Coca-Cola, 350ml',3.98,'Refrigerante Coca-Cola, 350ml'),
 (2,'Lata de Refrigerante Fanta Sabor Laranja, 350ml',3.42,'Refrigerante Fanta Sabor Laranja, 350ml'),(2,'Lata de Refrigerante Guaraná, 350ml',3.55,'Refrigerante Guaraná, 350ml'),
