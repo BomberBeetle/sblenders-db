@@ -13,10 +13,13 @@ INSERT INTO tbAgente(tipoAgenteID, agenteLogin, agenteSenha, agenteSalt) VALUES(
 INSERT INTO tbAgente(tipoAgenteID, agenteLogin, agenteSenha, agenteSalt) VALUES(2, 'funcionario1', '0526E0133C4F774C5B9F1A85E9F45FA5CDC5E99BD6C3529C4FF02F62B7855239', '0000000000000000000000000000000000000000000000000000000000000000')
 INSERT INTO tbAgente(tipoAgenteID, agenteLogin, agenteSenha, agenteSalt) VALUES(2, 'funcionario2', '0526E0133C4F774C5B9F1A85E9F45FA5CDC5E99BD6C3529C4FF02F62B7855239', '0000000000000000000000000000000000000000000000000000000000000000')
 INSERT INTO tbAgente(tipoAgenteID, agenteLogin, agenteSenha, agenteSalt) VALUES(3, 'totem1', '0526E0133C4F774C5B9F1A85E9F45FA5CDC5E99BD6C3529C4FF02F62B7855239', '0000000000000000000000000000000000000000000000000000000000000000')
+INSERT INTO tbAgente(tipoAgenteID,agenteLogin,agenteSenha,agenteSalt) VALUES(2, 'funcionario3',	'0526E0133C4F774C5B9F1A85E9F45FA5CDC5E99BD6C3529C4FF02F62B7855239',	'0000000000000000000000000000000000000000000000000000000000000000')
+INSERT INTO tbAgente(tipoAgenteID,agenteLogin,agenteSenha,agenteSalt) VALUES(2,	'funcionario4',	'0526E0133C4F774C5B9F1A85E9F45FA5CDC5E99BD6C3529C4FF02F62B7855239',	'0000000000000000000000000000000000000000000000000000000000000000')
+INSERT INTO tbAgente(tipoAgenteID,agenteLogin,agenteSenha,agenteSalt) VALUES(2, 'gerente1', '0526E0133C4F774C5B9F1A85E9F45FA5CDC5E99BD6C3529C4FF02F62B7855239', '0000000000000000000000000000000000000000000000000000000000000000')
 GO
 INSERT INTO tbClienteOnline(clienteOnlineNome, clienteOnlineSobrenome, clienteOnlineVerificadoFlag, agenteID) VALUES ('Anakin', 'Skywalker', 1, 1), ('Obi-Wan', 'Kenobi', 1, 2), ('Luke', 'Skywalker', 1, 3), ('Leia', 'Organa', 1, 4)
 GO
-INSERT INTO tbTipoFuncionario(tipoFuncionarioNome) VALUES ('Cozinheiro'), ('Entregador'), ('Estagiário'), ('Terceiro') -- Nâo tenho certeza se é isso que você queria dizer com tipo de funcionário
+INSERT INTO tbTipoFuncionario(tipoFuncionarioNome) VALUES ('Cozinheiro'), ('Entregador'), ('Estagiário'), ('Terceiro'), ('Gerente') -- Nâo tenho certeza se é isso que você queria dizer com tipo de funcionário
 GO
 INSERT INTO tbRestaurante(restauranteNome, restauranteLat, restauranteLong) VALUES ('R. Alvinópolis', -23.533446, -46.542555), ('Av. Olavo Fontoura', -23.51094057, -46.63993478),
 ('R. Miquelino Gabriel Fraga', -23.62200102, -46.6548425), ('R. Ipanema', -23.54674172, -46.60619795),
@@ -27,7 +30,7 @@ INSERT INTO tbRestaurante(restauranteNome, restauranteLat, restauranteLong) VALU
 ('R. Ettore Lantieri', -23.603058, -46.604008), ('Av. Paulista, Jardins', -23.563546, -46.655087),
 ('R. Vergueiro', -23.568796, -46.639941), ('Av. Guilherme Cotching', -23.522107, -46.592830)
 GO 
-INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID, funcionarioSituacao) VALUES (1, 5, 'Han Solo', '01234567890', 1, 1), (2, 6, 'Walter Clements', '01234967890', 1, 1)
+INSERT INTO tbFuncionario(tipoFuncionarioID, agenteID, funcionarioNome, funcionarioRG, restauranteID, funcionarioSituacao) VALUES (1, 5, 'Han Solo', '01234567890', 1, 1), (2, 6, 'Walter Clements', '01234967890', 1, 1), (5, 10, 'Lucas Macedo', '01254967890', 1, 1)
 GO
 INSERT INTO tbTotem(agenteID, restauranteID) VALUES (7, 1)
 GO
@@ -77,24 +80,6 @@ GO
 INSERT INTO tbPedidoProduto(pedidoID, produtoID, pedidoProdutoQtde) VALUES (1, 23, 3), (2, 3, 4), (3, 5, 5), (4, 7, 6)
 GO
 INSERT INTO tbPedidoProdutoIngrediente(pedidoProdutoID, produtoIngredienteID, quantidadeIngrediente) VALUES (1, 1, 1), (1, 14, 3), (1, 12, 4), (1, 16, 7) -- Fiz só com os dois utilizados no insert da tbProdutoIngrediente
-GO
-INSERT INTO tbAgente(
-	tipoAgenteID,
-	agenteLogin,
-	agenteSenha,
-	agenteSalt
-) VALUES(
-	2,
-	'funcionario3',
-	'0526E0133C4F774C5B9F1A85E9F45FA5CDC5E99BD6C3529C4FF02F62B7855239',
-	'0000000000000000000000000000000000000000000000000000000000000000'
-),
-(
-	2,
-	'funcionario4',
-	'0526E0133C4F774C5B9F1A85E9F45FA5CDC5E99BD6C3529C4FF02F62B7855239',
-	'0000000000000000000000000000000000000000000000000000000000000000'
-)
 GO
 INSERT INTO tbFuncionario (
 	tipoFuncionarioID,
