@@ -50,7 +50,7 @@ INSERT INTO tbIngrediente(categoriaIngredienteID, ingredienteNome, ingredienteCu
 (3, 'Tomate', 1, 'Rodela de tomate'), (3, 'Alface', 1, 'Folha de alface'), (3, 'Jiló', 1, 'Cubo de jiló'), (3, 'Pimenta jalapenho', 2, 'Rodelas de pimenta jalapenho'),
 (3, 'Picles', 2, 'Rodelas de picles'), (4, 'Cheddar', 3, 'Fatia de queijo cheddar'), (4, 'Parmesão', 2.5, 'Queijo parmesão ralado'), (4, 'Provolone', 3, 'Quejio provolone ralado'),
 (4, 'Muçarela', 2, 'Fatia de queijo muçarela'), (4, 'Queijo branco', 3, 'Fatia de queijo branco'), (5, 'Ketchup', 3, 'Molho ketchup'), (5, 'Mostarda', 3, 'Molho de mostarda'), (5, 'Maionese', 3, 'Molho maionese'),
-(5, 'Molho especial Sblender', 3, 'Molho secreto...'), (6, 'Chocolate', 3, 'Cobertura de chocolate'), (6, 'Morango', 2.5, 'Cobertura de morango'), (6, 'Caramelo', 4, 'Cobertura de caramelo')
+(5, 'Molho Especial Sblenders', 3, 'Molho secreto...'), (6, 'Chocolate', 3, 'Cobertura de chocolate'), (6, 'Morango', 2.5, 'Cobertura de morango'), (6, 'Caramelo', 4, 'Cobertura de caramelo')
 GO
 INSERT INTO tbEstoqueIngrediente(ingredienteID, restauranteID, estoqueIngredienteQuantidade) VALUES (1, 1, 75), (2, 1, 100), (3, 1, 65), (4, 1, 30), (5, 1, 35),
 (6, 2, 76), (7, 2, 127), (8, 2, 62), (9, 2, 29), (10, 2, 44)
@@ -67,8 +67,8 @@ INSERT INTO tbProduto(categoriaProdutoID, produtoNome, produtoCusto, produtoDesc
 (3,'Sundae de Chocolate Sblenders', 6.54, 'Sundae de Chocolate'), (3, 'Paleta Mexicana de Morango', 8.0, 'Picolé feito com extrato de morango, recheado com leite condesado Nestlé® Moça'),
 (3,'Milk Shake de Morango, 400ml',6.78,'Milk Shake de Morango, 400ml'),(3,'Casquinha de Creme, 200mg',2.20,'Casquina de Creme, 200mg'),
 (3,'Casquinha de Açaí, 200mg',2.20,'Casquina de Açaí, 200mg'),(4,'Molho Barbecue, 100mg',1.70,'Molho Barbecue, 100mg'),
-(4,'Molho de Tomate, 100mg',1.70,'Molho de Tomate, 100mg'),(4,'Molho de Queijo, 100mg',1.70,'Molho de Queijo, 100mg'),
-(4,'Molho de Mostarda, 100mg',1.70,'Molho de Mostarda, 100mg'),(5,'Sblurger',0.0,'Monte seu Sblurger')
+(4,'Ketchup, 100mg',1.70,'Molho de Tomate, 100mg'),(4,'Molho de Queijo, 100mg',1.70,'Molho de Queijo, 100mg'),
+(4,'Mostarda, 100mg',1.70,'Molho de Mostarda, 100mg'),(5,'Sblurger',0.0,'Monte seu Sblurger')
 GO
 INSERT INTO tbProdutoIngrediente (ingredienteID, produtoID, quantidadePadrao, novoPreco) VALUES (1,23,1,2),(2,23,1,2),(3,23,1,1.5),(4,23,1,1.5),(5,23,1,3),(6,23,1,3),
 (7,23,1,3),(8,23,1,3),(9,23,1,3),(10,23,1,3),(11,23,1,3),(12,23,1,3),(13,23,1,4),(14,23,1,2),(15,23,1,2.5),(16,23,1,1),(17,23,1,0.5),(18,23,1,1),(19,23,1,1),(20,23,1,1.5),(21,23,1,1.5),(22,23,1,1),
